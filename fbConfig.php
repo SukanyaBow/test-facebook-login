@@ -17,7 +17,8 @@ $fbPermissions = 'email';  //Required facebook permissions
 //Call Facebook API
 $facebook = new Facebook(array(
   'appId'  => $appId,
-  'secret' => $appSecret
+  'secret' => $appSecret,
+  'cookie' => true
 ));
 // print_r($facebook->getUser());
 // exit();
