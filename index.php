@@ -15,7 +15,8 @@ if(!$fbUser){
 	// exit();
 	//Get user profile data from facebook
 	$fbUserProfile = $facebook->api('/me?fields=id,first_name,last_name,email,link,gender,locale,picture');
-	
+	print_r($fbUserProfile);
+	exit();
 	//Initialize User class
 	$user = new User();
 	
