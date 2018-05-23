@@ -19,7 +19,7 @@ $facebook = new Facebook(array(
   'appId'  => $appId,
   'secret' => $appSecret
 ));
-print_r($facebook->getUser());
-exit();
+// print_r($facebook->getUser());
+// exit();
 $fbUser = $facebook->getUser();
 ?>
