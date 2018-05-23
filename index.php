@@ -2,9 +2,7 @@
 //Include FB config file && User class
 require_once 'fbConfig.php';		//page where fb config is donei.e. app id and secret id
 require_once 'User.php';			// page where your database configuration is done
-// print_r($fbUser);
-
-print_r($fbUserProfile);
+print_r($fbUser);
 if(!$fbUser){
 	$fbUser = NULL;
 	$loginURL = $facebook->getLoginUrl(array('redirect_uri'=>$redirectURL,'scope'=>$fbPermissions));
