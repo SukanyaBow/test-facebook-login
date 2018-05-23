@@ -3,16 +3,14 @@
 require_once 'fbConfig.php';		//page where fb config is donei.e. app id and secret id
 require_once 'User.php';			// page where your database configuration is done
 // print_r($fbUser);
+
+print_r($fbUserProfile);
 if(!$fbUser){
 	$fbUser = NULL;
 	$loginURL = $facebook->getLoginUrl(array('redirect_uri'=>$redirectURL,'scope'=>$fbPermissions));
 	$output = '<a href="'.$loginURL.'"><img style="margin-left:4%; margin-top: 4%;" src="images/fblogin-btn.png"></a>'; 	
-
-	echo 111;
-	exit();
 }else{
-	echo 222;
-	exit();
+
 	//Get user profile data from facebook
 	$fbUserProfile = $facebook->api('/me?fields=id,first_name,last_name,email,link,gender,locale,picture');
 
