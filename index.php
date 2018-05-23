@@ -8,8 +8,8 @@ if(!$fbUser){
 	$loginURL = $facebook->getLoginUrl(array('redirect_uri'=>$redirectURL,'scope'=>$fbPermissions));
 	$output = '<a href="'.$loginURL.'"><img style="margin-left:4%; margin-top: 4%;" src="images/fblogin-btn.png"></a>'; 	
 
-	// echo 111;
-	// exit();
+	echo 111;
+	exit();
 }else{
 	echo 222;
 	exit();
